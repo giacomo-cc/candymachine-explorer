@@ -1,9 +1,17 @@
-import Container from '@mui/material/Container'
+import ThemeProvider from '@mui/material/styles/ThemeProvider'
+import CssBaseline from '@mui/material/CssBaseline';
 
-import './App.css'
+import theme from './configuration/theme'
 
-function App() {
-  return <Container className="main"></Container>
+import Home from './components/Home';
+
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline/>
+      <Home/>
+    </ThemeProvider>
+  )
 }
 
 export default App
