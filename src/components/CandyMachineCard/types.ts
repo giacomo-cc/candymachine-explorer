@@ -7,4 +7,5 @@ export interface CandyMachineCardProps {
   candyMachineId?: string
   onClusterChange: (event: SelectChangeEvent<string>) => void
   onCandyMachineIdChange: (event: ChangeEvent<HTMLInputElement>) => void
+  isLoading?: boolean
 }
