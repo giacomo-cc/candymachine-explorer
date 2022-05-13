@@ -1,4 +1,4 @@
-import { web3, Wallet, AnchorProvider, Program, BN } from '@project-serum/anchor'
+import { web3, Wallet, Provider, Program, BN } from '@project-serum/anchor'
 
 import { CandyMachineState } from './types'
 import { CANDY_MACHINE_PROGRAM } from './constants'
@@ -11,7 +11,7 @@ export async function fetchCandyMachineState(
     console.log('creating connection to ' + networkEndpoint)
     const connection = new web3.Connection(networkEndpoint)
     const dummyWallet = new Wallet(web3.Keypair.generate())
-    const provider = new AnchorProvider(connection, dummyWallet, {
+    const provider = new Provider(connection, dummyWallet, {
       preflightCommitment: 'recent'
     })
 
