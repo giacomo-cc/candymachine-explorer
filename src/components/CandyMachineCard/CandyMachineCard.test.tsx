@@ -3,6 +3,7 @@ import { render, RenderResult, screen } from '@testing-library/react'
 import { withProviders } from '../../utils/test-utils'
 
 import CandyMachineCard from '.'
+
 import { CandyMachineCardProps } from './types'
 import { candyMachineIdFixture, clusterFixture } from './fixtures'
 

@@ -1,9 +1,23 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, RenderResult, screen } from '@testing-library/react';
+
+import { withProviders } from './utils/test-utils';
+
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+const renderComponent = (): RenderResult => render(withProviders(<App/>))
+
+describe('App', () => {
+  beforeEach(() => renderComponent())
+
+  it('should display correct layout', () => {
+    expect(screen.getByText('Candy Machine Explorer')).toBeInTheDocument()
+    expect(screen.getByTestId('GitHubIcon')).toBeInTheDocument()
+    expect(screen.getByTestId('TwitterIcon')).toBeInTheDocument()
+    expect(screen.getByText('Candy Machine')).toBeInTheDocument()
+    expect(screen.getByText('Cluster')).toBeInTheDocument()
+    expect(screen.getByText('Candy Machine ID')).toBeInTheDocument()
+
+    expect(screen.queryByText('Symbol')).not.toBeInTheDocument()
+    expect(screen.queryByText('Authority')).not.toBeInTheDocument()
+  })
+})
