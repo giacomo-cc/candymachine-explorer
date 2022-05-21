@@ -1,6 +1,6 @@
 import { render, RenderResult, screen } from '@testing-library/react'
 
-import { withProviders } from '../../utils/test-utils'
+import withProviders from '../../test/utils/withProviders'
 
 import AppBar from '.'
 

@@ -1,10 +1,10 @@
-import { render, RenderResult, screen } from '@testing-library/react';
+import { render, RenderResult, screen } from '@testing-library/react'
 
-import { withProviders } from './utils/test-utils';
+import withProviders from './test/utils/withProviders'
 
-import App from './App';
+import App from './App'
 
-const renderComponent = (): RenderResult => render(withProviders(<App/>))
+const renderComponent = (): RenderResult => render(withProviders(<App />))
 
 describe('App', () => {
   beforeEach(() => renderComponent())

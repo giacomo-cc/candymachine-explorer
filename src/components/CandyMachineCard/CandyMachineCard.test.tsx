@@ -1,11 +1,11 @@
 import { render, RenderResult, screen } from '@testing-library/react'
 
-import { withProviders } from '../../utils/test-utils'
+import withProviders from '../../test/utils/withProviders'
+import { candyMachineIdFixture, clusterFixture } from '../../test/fixtures'
 
 import CandyMachineCard from '.'
 
 import { CandyMachineCardProps } from './types'
-import { candyMachineIdFixture, clusterFixture } from './fixtures'
 
 const onChangeMock = jest.fn()
 
