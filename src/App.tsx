@@ -1,17 +1,15 @@
 import ThemeProvider from '@mui/material/styles/ThemeProvider'
-import CssBaseline from '@mui/material/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline'
 
 import theme from './configuration/theme'
 
-import Home from './components/Home';
+import Home from './components/Home'
 
-const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline/>
-      <Home/>
-    </ThemeProvider>
-  )
-}
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <Home />
+  </ThemeProvider>
+)
 
 export default App
